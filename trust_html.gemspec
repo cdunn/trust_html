@@ -19,13 +19,19 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "assets/html-sanitizer.js",
+    "assets/html4-defs.js",
     "lib/trust_html.rb",
+    "lib/trust_html/sanitizer.rb",
+    "lib/trust_html/string_ext.rb",
     "test/helper.rb",
-    "test/test_trust_html.rb"
+    "test/test_trust_html.rb",
+    "trust_html.gemspec"
   ]
   s.homepage = %q{http://github.com/cdunn/trust_html}
   s.licenses = [%q{MIT}]
@@ -38,12 +44,14 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<better>, [">= 0"])
+      s.add_runtime_dependency(%q<therubyracer>, [">= 0"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
     else
       s.add_dependency(%q<better>, [">= 0"])
+      s.add_dependency(%q<therubyracer>, [">= 0"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
@@ -51,6 +59,7 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency(%q<better>, [">= 0"])
+    s.add_dependency(%q<therubyracer>, [">= 0"])
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
