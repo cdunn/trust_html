@@ -2,7 +2,8 @@
 
 == Usage
 Pass HTML to:
-* TrustHtml.sanitize("<div onclick=\"alert('hi';)\">Hello world</div><img src=\"javascript:alert('xss');\"/><SCRIPT>alert(\"xss\");</SCRIPT><body background=\"javascript:alert('xss')\">")
+TrustHtml.sanitize("<div onclick=\"alert('hi';)\">Hello world</div><img src=\"javascript:alert('xss');\"/><SCRIPT>alert(\"xss\");</SCRIPT><body background=\"javascript:alert('xss')\">")
+ => "<div>Hello world</div><img>"
 
 == Configuration
 So far you can only customize the methods for processing URL's and DOM ID's that are in the HTML provided. These methods are in JS and are passed local variables 'url' and 'id' respectively for you to decide whether to allow/rewrite/deny the value. 
