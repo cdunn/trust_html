@@ -10,7 +10,8 @@ module TrustHtml
   #   Example of forcing HTTPS
   #   "if((new RegExp(\"^(https)?:\/\/\", \"ig\")).test(url)) { return url; }" + 
   #   'url' is local to the method
-  URL_SANITIZER_METHOD_BODY = "return url;"
+  # Make sure the URL is at minimum a URL (and not JS)...
+  URL_SANITIZER_METHOD_BODY = "if((new RegExp(\"^(https|http)?:\/\/\", \"ig\")).test(url)) { return url; }"
 
   # Test every ID to make sure it does not conflict (or just remove them all) etc.
   #   'id' is local to the method
