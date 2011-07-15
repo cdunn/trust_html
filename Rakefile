@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "trust_html"
   gem.homepage = "http://github.com/cdunn/trust_html"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Make HTML trustworthy for rendering within your web app via Google HTML sanitizers. This is _not_ about stripping HTML but rather about cleaning it of javascript (onclicks, etc.) as well as CSS.}
+  gem.description = %Q{Make HTML trustworthy for rendering within your web app via Google HTML sanitizers. This is _not_ about stripping HTML but rather about cleaning it of javascript (onclicks, etc.) as well as CSS.}
   gem.email = "cary.dunn@gmail.com"
   gem.authors = ["Cary Dunn"]
   # dependencies defined in Gemfile

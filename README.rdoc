@@ -1,6 +1,6 @@
 = trust_html
 
-Description goes here.
+
 
 == Contributing to trust_html
  
