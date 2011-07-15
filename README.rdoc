@@ -1,16 +1,17 @@
 = trust_html
 
+== Usage
+Pass HTML to:
+* TrustHtml.sanitize("<div onclick=\"alert('hi';)\">Hello world</div><img src=\"javascript:alert('xss');\"/><SCRIPT>alert(\"xss\");</SCRIPT><body background=\"javascript:alert('xss')\">")
 
+== Configuration
+So far you can only customize the methods for processing URL's and DOM ID's that are in the HTML provided. These methods are in JS and are passed local variables 'url' and 'id' respectively for you to decide whether to allow/rewrite/deny the value. 
+* TrustHtml::Sanitizer::URL_SANITIZER_METHOD_BODY
+* TrustHtml::Sanitizer::ID_SANITIZER_METHOD_BODY
 
-== Contributing to trust_html
- 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
-* Fork the project
-* Start a feature/bugfix branch
-* Commit and push until you are happy with your contribution
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+You can also customize further (rewrite attributes, more complex rules, change whitelists, etc) by customizing html-sanitizer.js and html4-defs.js.  If modified you will need to set the following:
+* TrustHtml::Sanitizer::HTML_SANITIZER_PATH
+* TrustHtml::Sanitizer::HTML_DEFS_PATH
 
 == Copyright
 

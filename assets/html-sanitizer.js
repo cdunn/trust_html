@@ -503,8 +503,7 @@ function html_sanitize(htmlText, opt_uriPolicy, opt_nmTokenPolicy) {
                 value = null;
                 break;
               case html4.atype.STYLE:
-                // Commented out to support 'style' tag CYD 2011-04-03
-                //value = null;
+                value = null;
                 break;
               case html4.atype.ID:
               case html4.atype.IDREF:
